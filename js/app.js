@@ -44,7 +44,11 @@ const payload = {
     body: JSON.stringify(payload)
   })
   .then(() => {
-    alert('Data Berhasil Disimpan ke Tab ' + bengkel);
+    const toast = document.getElementById('toastNotification');
+  toast.style.display = 'block';
+  setTimeout(() => {
+    toast.style.display = 'none';
+  }, 3000);
    
     document.getElementById('noWO').value = '';
     document.getElementById('invoiceNo').value = '';
