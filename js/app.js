@@ -1,6 +1,6 @@
 const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbz0T15NoP5NlYG0beyadxox91rk-U5pi2LVjcMhPJ0cF3J-0YerxGyZzW0-s8RSmnqpgw/exec"; 
 
-// Proteksi Halaman: Cek session login awal
+
 const bengkel = sessionStorage.getItem('bengkel');
 const pic = sessionStorage.getItem('pic');
 
@@ -8,7 +8,6 @@ if (!bengkel || !pic) {
   window.location.href = 'index.html';
 }
 
-// Render data otomatis di load awal
 document.getElementById('displayPIC').innerText = pic;
 document.getElementById('namaBengkel').value = bengkel;
 
@@ -16,7 +15,7 @@ const hariIni = new Date();
 const formattedDate = hariIni.toLocaleDateString('id-ID', { year: 'numeric', month: '2-digit', day: '2-digit' });
 document.getElementById('tanggalInput').value = formattedDate;
 
-// Handler Post Data
+
 document.getElementById('inputForm').addEventListener('submit', function(e) {
   e.preventDefault();
   
@@ -24,29 +23,28 @@ document.getElementById('inputForm').addEventListener('submit', function(e) {
   btnSubmit.disabled = true;
   btnSubmit.innerText = "Mengirim data...";
 
-  const payload = {
-    namaBengkel: bengkel,
-    noWO: document.getElementById('noWO').value,
-    invoiceNo: document.getElementById('invoiceNo').value,
-    taxInvoiceNo: document.getElementById('taxInvoiceNo').value,
-    taxInvoiceDate: document.getElementById('taxInvoiceDate').value,
-    fee: document.getElementById('fee').value,
-    vat: document.getElementById('vat').value,
-    tanggalInput: formattedDate,
-    namaPic: pic
-  };
-
-  // Menggunakan Fetch API Mode No-Cors / Cors terarah untuk integrasi Apps script
+const payload = {
+  namaBengkel: bengkel,
+  noWO: document.getElementById('noWO').value.toUpperCase().trim(), 
+  invoiceNo: document.getElementById('invoiceNo').value.toUpperCase().trim(),
+  taxInvoiceNo: document.getElementById('taxInvoiceNo').value.toUpperCase().trim(),
+  taxInvoiceDate: document.getElementById('taxInvoiceDate').value,
+  fee: document.getElementById('fee').value,
+  vat: document.getElementById('vat').value,
+  tanggalInput: formattedDate,
+  namaPic: pic.toUpperCase().trim()
+};
+  
   fetch(WEB_APP_URL, {
     method: 'POST',
-    mode: 'no-cors', // Penting untuk Apps Script Web App bypass pre-flight CORS
+    mode: 'no-cors',
     cache: 'no-cache',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
   })
   .then(() => {
     alert('Data Berhasil Disimpan ke Tab ' + bengkel);
-    // Reset Form isi kecuali yang disable
+   
     document.getElementById('noWO').value = '';
     document.getElementById('invoiceNo').value = '';
     document.getElementById('taxInvoiceNo').value = '';
