@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Input Monitoring Data</title>
+  <title>Form Input Monitoring Data Vendor</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header class="header-nav">
-    <div style="font-weight: 700; font-size: 1.2rem; letter-spacing: 0.5px;">HYUNDAI SYSTEM</div>
+    <div style="font-weight: 700; font-size: 1.2rem; letter-spacing: 0.5px;">HYUNDAI SOLUSI MOBILITAS SYSTEM</div>
     <div class="pic-tag">PIC: <span id="displayPIC">Loading...</span></div>
   </header>
 
@@ -36,13 +36,13 @@
 
         <div class="form-group">
           <label for="invoiceNo">Invoice Number</label>
-          <input type="text" id="invoiceNo" class="form-control" required placeholder="Contoh: INV-10928">
+          <input type="text" id="invoiceNo" class="form-control" required placeholder="Contoh: INV-.....">
         </div>
 
         <div class="flex-container">
           <div class="form-group" style="flex: 1;">
             <label for="taxInvoiceNo">TAX Invoice Number</label>
-            <input type="text" id="taxInvoiceNo" class="form-control" required placeholder="Faktur Pajak">
+            <input type="text" id="taxInvoiceNo" class="form-control" required placeholder="Nomor Seri Faktur Pajak>
           </div>
           <div class="form-group" style="flex: 1;">
             <label for="taxInvoiceDate">TAX Invoice Date</label>
@@ -61,7 +61,7 @@
           </div>
         </div>
 
-        <button type="submit" id="btnSubmit" class="btn btn-primary">Simpan Data ke Spreadsheet</button>
+        <button type="submit" id="btnSubmit" class="btn btn-primary">Simpan Data</button>
         <a href="database.html" class="btn btn-secondary">Cek Database</a>
         <button type="button" onclick="logout()" class="btn btn-secondary" style="background-color: #fef2f2; color: #ef4444;">Ganti Bengkel / Keluar</button>
       </form>
