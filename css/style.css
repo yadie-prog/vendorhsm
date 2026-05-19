@@ -21,7 +21,6 @@ body {
   min-height: 100vh;
 }
 
-/* Container Utility */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -29,7 +28,6 @@ body {
   padding: 20px;
 }
 
-/* Card Elegant Style */
 .card {
   background: var(--card-bg);
   border-radius: 12px;
@@ -40,7 +38,10 @@ body {
   margin: auto;
 }
 
-/* Header & Nav */
+.uppercase-input {
+  text-transform: uppercase;
+}
+
 .header-nav {
   background-color: var(--primary-color);
   color: white;
@@ -97,7 +98,6 @@ body {
   cursor: not-allowed;
 }
 
-/* Button Styling */
 .btn {
   width: 100%;
   padding: 14px;
@@ -132,7 +132,6 @@ body {
   background-color: #cbd5e1;
 }
 
-/* Responsive Table */
 .table-responsive {
   width: 100%;
   overflow-x: auto;
@@ -165,7 +164,6 @@ tr:hover {
   background-color: #f8fafc;
 }
 
-/* Utilities */
 .flex-container {
   display: flex;
   justify-content: space-between;
