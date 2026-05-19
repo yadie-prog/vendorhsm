@@ -27,6 +27,7 @@ const payload = {
   namaBengkel: bengkel,
   noWO: document.getElementById('noWO').value.toUpperCase().trim(), 
   invoiceNo: document.getElementById('invoiceNo').value.toUpperCase().trim(),
+  deskripsi: document.getElementById('deskripsi').value.toUpperCase().trim(),
   taxInvoiceNo: document.getElementById('taxInvoiceNo').value.toUpperCase().trim(),
   taxInvoiceDate: document.getElementById('taxInvoiceDate').value,
   fee: document.getElementById('fee').value,
@@ -47,6 +48,7 @@ const payload = {
    
     document.getElementById('noWO').value = '';
     document.getElementById('invoiceNo').value = '';
+    document.getElementById('deskripsi').value = '';
     document.getElementById('taxInvoiceNo').value = '';
     document.getElementById('taxInvoiceDate').value = '';
     document.getElementById('fee').value = '';
