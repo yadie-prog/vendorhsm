@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyundai Monitoring System - Gateway</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="justify-content: center; align-items: center;">
+
+  <div class="card">
+    <div style="text-align: center; margin-bottom: 25px;">
+      <h2 style="color: var(--primary-color); font-size: 1.6rem; font-weight: 700;">Hyundai System</h2>
+      <p style="color: #64748b; font-size: 0.9rem; margin-top: 5px;">Silakan pilih lokasi bengkel & masukkan nama Anda</p>
+    </div>
+
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="bengkel">Pilih Bengkel / Vendor</label>
+        <select id="bengkel" class="form-control" required>
+          <option value="" disabled selected>-- Pilih Bengkel --</option>
+          <option value="Hyundai Arjuna">Hyundai Arjuna</option>
+          <option value="Hyundai Cempaka Putih">Hyundai Cempaka Putih</option>
+          <option value="Hyundai Kebon Jeruk">Hyundai Kebon Jeruk</option>
+          <option value="Hyundai Kalimalang">Hyundai Kalimalang</option>
+          <option value="Hyundai Pancoran">Hyundai Pancoran</option>
+          <option value="Hyundai Pegangsaan">Hyundai Pegangsaan</option>
+          <option value="Hyundai BSD">Hyundai BSD</option>
+          <option value="Hyundai Simprug">Hyundai Simprug</option>
+          <option value="Hyundai Kediri">Hyundai Kediri</option>
+          <option value="Hyundai Karawang">Hyundai Karawang</option>
+          <option value="Hyundai Cilandak">Hyundai Cilandak</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="pic">Nama PIC</label>
+        <input type="text" id="pic" class="form-control" placeholder="Masukkan nama lengkap" required autocomplete="off">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Masuk ke Halaman Input</button>
+    </form>
+  </div>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

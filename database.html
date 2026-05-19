@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Database Riwayat Vendor</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header-nav">
+    <div style="font-weight: 700;">DATABASE VIEW</div>
+    <div class="pic-tag" id="vendorTag">Loading Vendor...</div>
+  </header>
+
+  <main class="container" style="flex: 1;">
+    <div style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+      <h2 style="color: var(--primary-color);">Riwayat Input Data</h2>
+      <a href="dashboard.html" class="btn btn-primary" style="width: auto; padding: 10px 20px;">← Kembali ke Form</a>
+    </div>
+
+    <div class="table-responsive">
+      <table id="dbTable">
+        <thead>
+          <tr>
+            <th>Tanggal Input</th>
+            <th>No. Working Order</th>
+            <th>Invoice No</th>
+            <th>Tax Invoice No</th>
+            <th>Tax Date</th>
+            <th>Fee</th>
+            <th>VAT</th>
+            <th>PIC</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr>
+            <td colspan="8" style="text-align: center; color: #64748b;">Memuat data dari Google Sheet...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="js/database.js"></script>
+</body>
+</html>
