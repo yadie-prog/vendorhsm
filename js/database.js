@@ -7,12 +7,11 @@ if (!bengkel) {
 
 document.getElementById('vendorTag').innerText = bengkel;
 
-// Fetch data dari tab vendor yang sedang aktif otomatis
 fetch(`${WEB_APP_URL}?bengkel=${encodeURIComponent(bengkel)}`)
   .then(response => response.json())
   .then(res => {
     const tbody = document.getElementById('tableBody');
-    tbody.innerHTML = ''; // bersihkan loader
+    tbody.innerHTML = '';
     
     if(res.status === "success" && res.data.length > 0) {
       res.data.forEach(row => {
@@ -26,6 +25,7 @@ fetch(`${WEB_APP_URL}?bengkel=${encodeURIComponent(bengkel)}`)
           <td>Rp ${Number(row['FEE']).toLocaleString('id-ID')}</td>
           <td>Rp ${Number(row['VAT']).toLocaleString('id-ID')}</td>
           <td>${row['Nama PIC'] || '-'}</td>
+          <td>${row['Deskripsi'] || '-'}</td>
         `;
         tbody.appendChild(tr);
       });
