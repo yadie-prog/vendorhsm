@@ -4,10 +4,8 @@ const bengkel = sessionStorage.getItem('bengkel');
 if (!bengkel) {
   window.location.href = 'index.html';
 }
-
 document.getElementById('vendorTag').innerText = bengkel;
 
-// GUNA: Membersihkan string mata uang atau format bawaan Google Sheet menjadi angka murni
 const bersihkanAngka = (val) => {
   if (!val) return 0;  
   if (typeof val === 'number') return val;
